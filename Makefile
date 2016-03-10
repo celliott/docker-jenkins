@@ -10,7 +10,7 @@ container :
 	docker pull $(CONTAINER) .
 
 clean :
-	rm -rf jenkins_home/*
+	rm -rf jenkins_home/.[!.]*
 
 run :
 	docker run --restart=always --name $(CONTAINER) -i -d $(PORTS) $(ENVS) $(VOLUMES) -t $(CONTAINER)
