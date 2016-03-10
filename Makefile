@@ -7,7 +7,10 @@ VOLUMES = -v `pwd`/jenkins_home:/var/jenkins_home
 .PHONY: container run
 
 container :
-	docker pull $(CONTAINER)
+	docker pull $(CONTAINER) .
+
+clean :
+	rm -rf jenkins_home/*
 
 run :
 	docker run --restart=always --name $(CONTAINER) -i -d $(PORTS) $(ENVS) $(VOLUMES) -t $(CONTAINER)
