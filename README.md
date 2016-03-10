@@ -1,6 +1,6 @@
-#docker-jenkins-2.0
+#docker-jenkins
 
-A docker container for running jenkins 2.0-alpha-2
+A docker container for running jenkins server
 
 Usage
 ---
