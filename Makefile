@@ -13,6 +13,7 @@ clean :
 	rm -rf jenkins_home/.[!.]*
 
 run :
+	mkdir -p jenkins_home
 	docker run --restart=always --name $(CONTAINER) -i -d $(PORTS) $(ENVS) $(VOLUMES) -t $(CONTAINER)
 
 kill :
