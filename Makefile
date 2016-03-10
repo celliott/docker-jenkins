@@ -10,7 +10,7 @@ container :
 	docker pull $(CONTAINER) .
 
 clean :
-	rm -rf jenkins_home/.[!.]*
+	rm -rf jenkins_home
 
 run :
 	mkdir -p jenkins_home
